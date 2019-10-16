@@ -27,7 +27,7 @@ function phi(matriu) {
 
 
 // Cas test
-var matriu = [
+let matriu = [
     [76, 9],
     [4, 1]
 ];
