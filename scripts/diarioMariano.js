@@ -102,22 +102,30 @@ var diarioMariano2 =  [
  * Construye las matrices
  */
 function leerDiario() {
-  var lista_eventos = new Array();
+  var lista_eventos = new Map();
   for (const dia of diarioMariano2) {
     for (const evento of dia.eventos) {
 
-      //podria ser una funcio single responsibility
-      nombre_evento = evento.split(" ").join("_");
 
-      if (!(nombre_evento instanceof Array)) {
-        eval(nombre_evento + " = " + "[[0,0],[0,0]]");
+      // des map lista_eventos podem omplir-lo recorreguent pfff tots es dies... i tots es events com esteim fent i nomes
+      // creant s es maps amb sa matriiu buida. I després tornam a recorrer es dies i events iiiiiii omplim sa matriu.
+      // podria ser una funcio single responsibility
+      var nombre_evento = evento.split(" ").join("_");
+
+      if(!lista_eventos.contains(nombre_evento)){
+        var objeto_evento = {
+          matriu: new Array(),
+          phi: phi()
+        };
+        lista_eventos.set(nombre_evento, objeto_evento);
       }
 
       if (dia.pulpo) {
-        eval(nombre_evento + "[1][1] += 1");
+        lista_eventos.get(nombre_evento).matriu[1][1] += 1;
       } else {
-        eval(nombre_evento + "[1][0] += 1");
+        lista_eventos.get(nombre_evento).matriu[1][0] += 1;
       }
+
 
 
       if(lista_eventos.includes(nombre_evento)){
