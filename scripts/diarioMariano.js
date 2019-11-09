@@ -98,24 +98,20 @@ var diarioMariano2 =  [
   {"eventos":["mejillones","chinchos","me lave los dientes","Panorama","siesta con La Vuelta"],"pulpo":true}];
 
 
-/**
- * Construye las matrices
- */
+// des map lista_eventos podem omplir-lo recorreguent pfff tots es dies... i tots es events com esteim fent i nomes
+// creant s es maps amb sa matriiu buida. I després tornam a recorrer es dies i events iiiiiii omplim sa matriu.
+// podria ser una funcio single responsibility
 function leerDiario() {
   var lista_eventos = new Map();
   for (const dia of diarioMariano2) {
     for (const evento of dia.eventos) {
 
-
-      // des map lista_eventos podem omplir-lo recorreguent pfff tots es dies... i tots es events com esteim fent i nomes
-      // creant s es maps amb sa matriiu buida. I després tornam a recorrer es dies i events iiiiiii omplim sa matriu.
-      // podria ser una funcio single responsibility
       var nombre_evento = evento.split(" ").join("_");
 
-      if(!lista_eventos.contains(nombre_evento)){
+      if(!lista_eventos.has(nombre_evento)){
         var objeto_evento = {
-          matriu: new Array(),
-          phi: phi()
+          matriu: new Array(new Array(),new Array()),
+          /*phi: phi()*/
         };
         lista_eventos.set(nombre_evento, objeto_evento);
       }
@@ -126,14 +122,10 @@ function leerDiario() {
         lista_eventos.get(nombre_evento).matriu[1][0] += 1;
       }
 
-
-
-      if(lista_eventos.includes(nombre_evento)){
+      /*if(lista_eventos.includes(nombre_evento)){
         console.log(nombre_evento);
         lista_eventos.splice(lista_eventos.indexOf(eval(nombre_evento)));
-      }
-
-      lista_eventos.push(nombre_evento);
+      }*/
 
     }
 
