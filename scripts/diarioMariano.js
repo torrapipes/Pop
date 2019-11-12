@@ -103,34 +103,55 @@ var diarioMariano2 =  [
 // podria ser una funcio single responsibility
 function leerDiario() {
   var lista_eventos = new Map();
+  var numDias = 0;
+  var numPulpo = 0;
   for (const dia of diarioMariano2) {
+      var eventosDia = new Array();
+
     for (const evento of dia.eventos) {
 
+        // Construimos el nombre del evento y lo incluimos en la lista de eventos de ese día
       var nombre_evento = evento.split(" ").join("_");
+      eventosDia.push(nombre_evento);
 
-      if(!lista_eventos.has(nombre_evento)){
+      if(!lista_eventos.get(nombre_evento)){ //Si el evento no existía...
         var objeto_evento = {
-          matriu: new Array(new Array(),new Array()),
+          matriu: new Array(new Array(),new Array())
           /*phi: phi()*/
         };
-        lista_eventos.set(nombre_evento, objeto_evento);
+        lista_eventos.set(nombre_evento, objeto_evento); //error
+          //Inicializamos cada punto de la matriz
+        lista_eventos.get(nombre_evento).matriu[0][0] = numDias - numPulpo;
+        lista_eventos.get(nombre_evento).matriu[0][1] = numPulpo;
+        lista_eventos.get(nombre_evento).matriu[1][0] = 0;
+        lista_eventos.get(nombre_evento).matriu[1][1] = 0;
       }
-
       if (dia.pulpo) {
-        lista_eventos.get(nombre_evento).matriu[1][1] += 1;
+          lista_eventos.get(nombre_evento).matriu[1][1] += 1;
+          numPulpo += 1;
       } else {
-        lista_eventos.get(nombre_evento).matriu[1][0] += 1;
+          lista_eventos.get(nombre_evento).matriu[1][0] += 1;
       }
 
-      /*if(lista_eventos.includes(nombre_evento)){
-        console.log(nombre_evento);
-        lista_eventos.splice(lista_eventos.indexOf(eval(nombre_evento)));
-      }*/
+
+
 
     }
+      for(const event of lista_eventos) {
+          if (!eventosDia.includes(event)){
+              if(dia.pulpo){
+                  lista_eventos.get(nombre_evento).matriu[0][1] += 1;
+              }else{
+                  lista_eventos.get(nombre_evento).matriu[0][0] += 1;
+              }
+          }
+      }
 
+    for(const eventoo of lista_eventos){
+        console.log(eventoo);
+    }
 
-
+    numDias += 1;
   }
 
 
