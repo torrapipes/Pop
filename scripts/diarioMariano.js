@@ -100,55 +100,6 @@ var diarioMariano2 = [
 
 
 
-/**
- *  Precondiciones para la estructura de datos
- *  
- *  Tendrá que ser un objeto con 2 propiedades llamadas eventos y pulpo
- *  La propiedad pulpo tendrá que contener un booleano
- *  La propiedad de eventos tendrá que contener una numero indefinido de strings  
- * 
- *  Quedará así ["eventos":[""], "pulpo":false/true]
- * 
- *  */
-
-/* Función que recorre la estructura de datos para comprovar
- que esta cumple con las precondiciones */
-function checkPrecondiciones(estructuraDeDatos) {
-    for (const dia of estructuraDeDatos) {
-
-        // comprovamos que la estructura contiene las propiedades eventos y pulpo
-        if (dia.hasOwnProperty("pulpo") && dia.hasOwnProperty("eventos")) {
-
-            // comprovamos que la propiedad pulpo contiene un booleano
-            if (typeof dia.pulpo != "boolean") {
-                console.log("La propiedad pulpo solo puede contener booleanos");
-                return false;
-            }
-
-            // comprovamos que la propiedad eventos solo contiene strings
-            for (const evento of dia.eventos) {
-
-                if (typeof evento != "string") {
-                    console.log("La propiedad evento solo puede contener strings");
-                    return false;
-                }
-
-            }
-
-            return true;
-
-        } else {
-            console.log("La estructura de datos es incorrecta!");
-            return false;
-        }
-    }
-}
-
-
-
-
-
-
 function leerDiario() {
 
     var lista_eventos = new Map();
@@ -165,7 +116,7 @@ function leerDiario() {
             var nombre_evento = evento.split(" ").join("_");
             eventosDia.push(nombre_evento);
 
-            //Si el evento no existe...
+            // Si el evento no existe...
             if (!lista_eventos.get(nombre_evento)) {
 
                 var objeto_evento = {
@@ -192,7 +143,7 @@ function leerDiario() {
 
         }
 
-        // comprovamos que eventos no han estado presentes en ese día
+        // Comprobamos que eventos no han estado presentes en ese día
         for (const item of lista_eventos) {
 
             var nombre_item = item[0];
@@ -209,17 +160,128 @@ function leerDiario() {
 
         }
 
-        //Contabilizamos los días totales
+        // Contabilizamos los días totales
         numDias += 1;
 
-        //Contabilizamos los días que se ha convertido en pulpo
+        // Contabilizamos los días que se ha convertido en pulpo
         if (dia.pulpo) {
             numPulpo += 1;
         }
 
     }
 
+    return lista_eventos;
+
 }
 
 
-leerDiario();
+
+/**
+
+ * 
+ *  */
+
+/**
+ * Precondiciones para la estructura de datos
+ *  
+ * Tendrá que ser un objeto con 2 propiedades llamadas eventos y pulpo
+ * La propiedad pulpo tendrá que contener un booleano
+ * La propiedad de eventos tendrá que contener una numero indefinido de strings  
+ * 
+ * Quedará así ["eventos":[""], "pulpo":false/true]
+ * 
+ * Función que recorre la estructura de datos para comprobar
+ * que esta cumple con las precondiciones 
+ * @param {*} estructuraDeDatos
+ * */
+function checkPrecondiciones(estructuraDeDatos) {
+    for (const dia of estructuraDeDatos) {
+
+        // Comprobamos que la estructura contiene las propiedades eventos y pulpo
+        if (dia.hasOwnProperty("pulpo") && dia.hasOwnProperty("eventos")) {
+
+            // Comprobamos que la propiedad pulpo contiene un booleano
+            if (typeof dia.pulpo != "boolean") {
+                console.log("Error en la introducción de la estructura de datos: la propiedad pulpo solo puede contener booleanos");
+                return false;
+            }
+
+            // Comprobamos que la propiedad eventos solo contiene strings
+            for (const evento of dia.eventos) {
+
+                if (typeof evento != "string") {
+                    console.log("Error en la introducción de la estructura de datos: la propiedad evento solo puede contener strings");
+                    return false;
+                }
+
+            }
+
+            return true;
+
+        } else {
+            console.log("Error en la introducción de la estructura de datos: ¡la estructura de datos es incorrecta!");
+            return false;
+        }
+    }
+}
+
+
+/**
+ * Postcondiciones para la estructura de datos resultante
+ * 
+ * Tendrá que ser un objeto que contenga como clave una string y como valor un objeto que contenga 1 propiedad llamada matriz
+ * La matriz será una lista con 2 listas con únicamente 2 elementos cada una
+ * Estas solo podrán contener números
+ * 
+ * Función que comprueba que esta cumple con las postcondiciones
+ * 
+ *  @param {*} estructuraDeDatos 
+ */
+function checkPostcondiciones(estructuraDeDatos) {
+
+    // Comprobamos que la estructura de datos sea un objeto
+    if (typeof estructuraDeDatos === "object") {
+
+        for (const evento of estructuraDeDatos) {
+
+            // Comprobamos que la clave de nuestro objeto sea una string
+            if (typeof evento[0] != "string") {
+                console.log("Error en la estructura de datos resultante: la clave debe ser una string");
+                return false;
+            }
+
+            // Comprobamos que la matriz sea una lista
+            if (typeof evento[1] != "object") {
+                console.log("Error en la estructura de datos resultante: el valor debe ser un objeto");
+                return false;
+            }
+
+            // Comprobamos que la matriz solo contenga 2 listas
+            if (evento[1].matriu.length != 2) {
+                console.log("Error en la estructura de datos resultante: el valor debe estar compuesto por dos listas");
+                return false;
+            }
+
+            // Comprobamos que la matriz solo contenga números
+            for (const lista of evento[1].matriu) {
+                for (const numero of lista) {
+                    if (typeof numero != "number") {
+                        console.log("Error en la estructura de datos resultante: la matriz solo puede contener números");
+                        return false;
+                    }
+                }
+            }
+
+
+        }
+
+        return true;
+
+    } else {
+        console.log("Error en la estructura de datos resultante: debería ser un Map");
+        return false;
+    }
+}
+
+var estructura = leerDiario();
+checkPostcondiciones(estructura);
