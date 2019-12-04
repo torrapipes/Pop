@@ -103,55 +103,60 @@ var diarioMariano2 =  [
 // podria ser una funcio single responsibility
 function leerDiario() {
   var lista_eventos = new Map();
-  var numDias = 0;
-  var numPulpo = 0;
+  var numDias = 0; //Número de días que HAN PASADO
+  var numPulpo = 0; //Numero de veces que HA SALIDO pulpo
   for (const dia of diarioMariano2) {
-      var eventosDia = new Array();
+
+    var eventosDia = new Array(); //Lista de eventos que ocurren un día determinado. Se construye cada día.
 
     for (const evento of dia.eventos) {
 
-        // Construimos el nombre del evento y lo incluimos en la lista de eventos de ese día
+      // Construimos el nombre del evento y lo incluimos en la lista de eventos de ese día
       var nombre_evento = evento.split(" ").join("_");
       eventosDia.push(nombre_evento);
 
-      if(!lista_eventos.get(nombre_evento)){ //Si el evento no existía...
+      //Si el evento no existe...
+      if(!lista_eventos.get(nombre_evento)){
         var objeto_evento = {
           matriu: new Array(new Array(),new Array())
           /*phi: phi()*/
         };
-        lista_eventos.set(nombre_evento, objeto_evento); //error
-          //Inicializamos cada punto de la matriz
+        // Incluimos el evento con su objeto en el map
+        lista_eventos.set(nombre_evento, objeto_evento);
+        //Inicializamos cada punto de la matriz
         lista_eventos.get(nombre_evento).matriu[0][0] = numDias - numPulpo;
-        lista_eventos.get(nombre_evento).matriu[0][1] = numPulpo;
-        lista_eventos.get(nombre_evento).matriu[1][0] = 0;
+        lista_eventos.get(nombre_evento).matriu[0][1] = 0;
+        lista_eventos.get(nombre_evento).matriu[1][0] = numPulpo;
         lista_eventos.get(nombre_evento).matriu[1][1] = 0;
+        console.log("Han pasado " + numDias + " días")
       }
+
       if (dia.pulpo) {
           lista_eventos.get(nombre_evento).matriu[1][1] += 1;
-          numPulpo += 1;
       } else {
-          lista_eventos.get(nombre_evento).matriu[1][0] += 1;
+          lista_eventos.get(nombre_evento).matriu[0][1] += 1;
       }
 
-
-
-
     }
-      for(const event of lista_eventos) {
-          if (!eventosDia.includes(event)){
-              if(dia.pulpo){
-                  lista_eventos.get(nombre_evento).matriu[0][1] += 1;
-              }else{
-                  lista_eventos.get(nombre_evento).matriu[0][0] += 1;
-              }
-          }
+
+    for(const item of lista_eventos) {
+      if (!eventosDia.includes(item[0])){
+        if(dia.pulpo){
+          lista_eventos.get(item[0]).matriu[1][0] += 1;
+        }else{
+          lista_eventos.get(item[0]).matriu[0][0] += 1;
+        }
       }
-
-    for(const eventoo of lista_eventos){
-        console.log(eventoo);
     }
-
+    //Contabilizamos los días totales
     numDias += 1;
+    //Contabilizamos los días que se ha convertido en Pulpo
+    if(dia.pulpo) {
+      numPulpo += 1;
+    }
+  }
+  for(const eventoo of lista_eventos){
+       console.log(eventoo);
   }
 
 

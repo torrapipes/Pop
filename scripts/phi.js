@@ -16,7 +16,6 @@ function phi(matriu) {
 
     var dividendo = event11 * event00 - event10 * event01;
 
-    // (NO pop + NO pop) * (NO pizza + NO pizza) * (SI pop + SI pop) * (SI pizza + SI pizza)
     var divisor = Math.sqrt((event01 + event11) * (event00 + event10) * (event10 + event11) * (event00 + event01));
 
     var phi = dividendo / divisor;
