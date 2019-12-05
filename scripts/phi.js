@@ -1,11 +1,10 @@
-/**Funció phi
+/**
  *
- * S'utilitza per saber quina correlació existeix entre 2 events.
+ * Funció que calcula quina correlació existeix entre 2 events.
  * A n'aquest cas per saber quina correlació hi ha entre convertir-se en pop i entre un event x.
- *
+ * @param {*} matriu 
+ * 
  * **/
-
-
 function phi(matriu) {
 
     try {
@@ -27,7 +26,6 @@ function phi(matriu) {
     } catch (error) {
         // Afegir div on botarà s'error
         console.log("Ha ocurrido un error en el sistema, por favor contacte con el administrador");
-
         throw "Error en función phi, " + error;
     }
 
@@ -35,10 +33,28 @@ function phi(matriu) {
 }
 
 
-// Cas test
-let matriu = [
-    [76],
-    [4, 1]
-];
+QUnit.module("Casos test correlació", function() {
+    QUnit.test('Testing phi()', function(assert) {
+        let matriu = [
+            [76, 9],
+            [4, 1]
+        ];
+        let matriu2 = [
+            [2, 3],
+            [0, 1]
+        ];
+        let matriu3 = [
+            [777, 222],
+            [222, 777]
+        ];
 
-phi(matriu);
+        // toFixed(x) manté un nombre x especific de decimals
+        assert.equal(phi(matriu).toFixed(3), 0.069);
+
+        assert.equal(phi(matriu2).toFixed(9), 0.316227766);
+
+        assert.equal(phi(matriu3).toFixed(9), 0.277223054);
+
+
+    });
+});

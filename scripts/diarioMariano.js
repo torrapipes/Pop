@@ -242,6 +242,7 @@ function checkPrecondiciones(estructuraDeDatos) {
  * La matriz será una lista con 2 listas con únicamente 2 elementos cada una
  * Estas solo podrán contener números
  * 
+ * 
  * Función que comprueba que esta cumple con las postcondiciones
  * 
  *  @param {*} estructuraDeDatos 
@@ -301,3 +302,57 @@ function checkPostcondiciones(estructuraDeDatos) {
 
 var estructura = leerDiario();
 checkPostcondiciones(estructura);
+
+
+QUnit.module("Casos test precondicions", function() {
+    QUnit.test('Test checkPrecondiciones()"', function(assert) {
+
+        let diari = [
+            { "eventos": ["hola", "hey", "ho"], "pulpo": false }
+        ];
+        let diari2 = [
+            { "ajkhflsa": ["hola", "hey", "ho"], "pulpo": false }
+        ];
+        let diari3 = [
+            { "eventos": ["hola", 5, "ho"], "pulpo": true }
+        ];
+        let diari4 = [
+            { "eventos": ["hola", "hol", "ho"], "pulpo": 2 }
+        ];
+        let diari5 = [
+            { "eventos": ["hola"], "pulpo": true }
+        ];
+
+        assert.equal(checkPrecondiciones(diari), true);
+
+        // Debe dar false, ya que la 1a propiedad debe llamarse "eventos"
+        assert.equal(checkPrecondiciones(diari2), false);
+
+        // Debe dar false, ya que la 1a propiedad debe contener solo strings
+        assert.equal(checkPrecondiciones(diari3), false);
+
+        // Debe dar false, ya que la 2a propiedad debe contener solo booleanos
+        assert.equal(checkPrecondiciones(diari4), false);
+
+        // Debe dar true ya que puede haber solo 1 evento
+        assert.equal(checkPrecondiciones(diari5), true);
+
+    });
+});
+
+QUnit.module("Casos test postcondicions", function() {
+    QUnit.test('Test checkPostcondiciones()"', function(assert) {
+
+        let objeto = [{
+            matriu: [
+                [777, 222],
+                [222, 777]
+            ]
+        }];
+
+        let lista = { "mejillones": objeto };
+
+        assert.equal(checkPostcondiciones(lista), true);
+
+    });
+});
