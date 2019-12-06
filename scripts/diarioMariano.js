@@ -261,6 +261,7 @@ function checkPostcondiciones(estructuraDeDatos) {
                     return false;
                 }
 
+
                 // Comprobamos que la matriz sea una lista
                 if (typeof evento[1] != "object") {
                     console.log("Error en la estructura de datos resultante: el valor debe ser un objeto");
@@ -300,8 +301,8 @@ function checkPostcondiciones(estructuraDeDatos) {
 
 }
 
-var estructura = leerDiario();
-checkPostcondiciones(estructura);
+// var estructura = leerDiario();
+// checkPostcondiciones(estructura);
 
 
 QUnit.module("Casos test precondicions", function() {
@@ -343,16 +344,24 @@ QUnit.module("Casos test precondicions", function() {
 QUnit.module("Casos test postcondicions", function() {
     QUnit.test('Test checkPostcondiciones()"', function(assert) {
 
-        let objeto = [{
-            matriu: [
-                [777, 222],
-                [222, 777]
-            ]
-        }];
+        var lista = new Map();
+        var array = [
+            [777, 222],
+            [222, 777]
+        ];
+        var objeto = {
+            matriu: array
+        };
+        lista.set("mejillones", objeto);
 
-        let lista = { "mejillones": objeto };
+
+        var lista2 = new Map();
+        lista2.set("mejillones", "patata");
+
 
         assert.equal(checkPostcondiciones(lista), true);
+        assert.equal(checkPostcondiciones(lista2), false);
+
 
     });
 });
