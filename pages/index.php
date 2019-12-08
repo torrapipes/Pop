@@ -1,25 +1,27 @@
 <!doctype html>
 <html>
 <?php
+$page_title = 'PopHelpi';
+$css = 'index';
 include_once "head.php";
 ?>
 <body>
     <div id="bg">
-        <img src="../img/header_bg.jpg" id="bg-img"/>
         <img src="../img/pulpo.png" id="pop"/>
     </div>
     <div id="login-box">
         <form>
             
             <div class="inputs">
-                <label for="usuario">Usuario</label>
-                <input type="text" name="usuario">
+                <input type="text" name="usuario" placeholder="Usuario">
             </div>
-            
 
             <div class="inputs">
-                <label for="password">Contraseña</label>
-                <input type="password" name="password">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+
+            <div>
+                <input type="submit" name="enter" value="Entrar">
             </div>
 
         </form>

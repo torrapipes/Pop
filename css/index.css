@@ -3,11 +3,7 @@
     height: 20rem;
     display: flex;
     justify-content: center;
-}
-
-#bg-img {
-    width: 100%;
-    height: 100%;
+    background-image: radial-gradient(#C797DF,#704070,#4D186C);
 }
 
 #pop {
@@ -16,25 +12,23 @@
     height: 18rem;
 }
 
-body {
-    margin: 0;
-    background: #f9e6ff;
-}
-
 #login-box form {
-    display: flex;
-    flex-direction: column;
     width: 12rem;
     height: auto;
     margin: auto;
     background: white;
-    margin: auto;
+    padding: 1.5rem;
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    right: 10%;
 }
 
 #login-box form input {
-    border: 1px solid rgb(112, 112, 112);
+    border: 1px solid #704070;
 }
 
 .inputs {
-    margin: auto;
+    margin-bottom: 1rem;
 }

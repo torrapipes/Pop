@@ -10,10 +10,11 @@ try {
     $statement = $conn->prepare("SELECT * FROM diario");
     $statement->execute();
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+    print_r()
     $json = json_encode($results);
 
     // cerramos la conexión
-    $conn = null;
+    $conn = null; 
     echo $json;
 } catch (PDOException $e) {
     echo 'Error en la conexión a la base de datos pop';
