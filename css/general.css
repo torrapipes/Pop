@@ -1,7 +1,21 @@
-@charset "utf-8";
-
-#bg {
-    background: url("../img/header_bg.jpg") no-repeat;
-    width: 100%;
-    height: 10rem;
+body {
+    margin: 0;
+    background-color: #D4C9D3;
 }
+
+header {
+    background: #4D186C;
+    box-shadow: #704070 0px 0px 30px 0px;
+}
+
+footer {
+    background: #4D186C;
+    box-shadow: #704070 0px 0px 30px 10px;
+    bottom: 0;
+}
+
+header div, footer div {
+    text-align: center;
+}
+
+
