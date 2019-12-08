@@ -102,14 +102,14 @@ var diarioMariano2 = [
 /**
  * Función que recorre el diario y crea matrices dinámicamente
  */
-function leerDiario() {
+function leerDiario(diario) {
 
     try {
         var lista_eventos = new Map();
         var numDias = 0; // Número de días que HAN PASADO
         var numPulpo = 0; // Numero de veces que pulpo HA SIDO TRUE
 
-        for (const dia of diarioMariano2) {
+        for (const dia of diario) {
 
             var eventosDia = new Array(); // Lista de eventos que ocurren un día determinado. Se construye cada día.
 
