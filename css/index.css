@@ -3,7 +3,7 @@
     height: 20rem;
     display: flex;
     justify-content: center;
-    background-image: radial-gradient(#C797DF,#704070,#4D186C);
+    background-image: radial-gradient(#C797DF, #704070, #4D186C);
 }
 
 #pop {
@@ -12,7 +12,7 @@
     height: 18rem;
 }
 
-#login-box form {
+.form {
     width: 12rem;
     height: auto;
     margin: auto;
@@ -20,15 +20,88 @@
     padding: 1.5rem;
     text-align: center;
     position: absolute;
-    top: 60%;
+    top: 17rem;
     left: 10%;
     right: 10%;
 }
 
-#login-box form input {
-    border: 1px solid #704070;
+.form input {
+    border: 1px solid gray;
+    padding: .2rem;
+    width: -webkit-fill-available;
+}
+
+.form input[type="submit"] {
+    border: none;
+    background: #98619e;
+    color: white;
+    border-radius: .2rem;
+    margin-bottom: .5rem;
+}
+
+.form input[type="submit"]:hover {
+    background: #86568C;
+    color: white;
+    cursor: pointer;
+}
+
+.text {
+    font-size: .7rem;
+    color: gray;
+    font-family: "Bookman Old Style";
+    margin-bottom: 0;
+    text-decoration: none;
 }
 
 .inputs {
     margin-bottom: 1rem;
+}
+
+
+/* MODALS */
+
+.hide {
+    left: -1000rem !important;
+    transition-property: left;
+    transition: 5s;
+}
+
+.show {
+    left: 10% !important;
+    right: 10% !important;
+    transition-property: left;
+    transition: 2s;
+}
+
+
+/* RESPONSIVE TABLETS*/
+
+@media only screen and (max-width: 768px) {
+    .text {
+        font-size: 1rem;
+    }
+    .form input[type="submit"] {
+        font-size: 1rem;
+    }
+    .form input {
+        font-size: 1rem;
+    }
+}
+
+
+/* RESPONSIVE MOVIL*/
+
+@media only screen and (max-width: 430px) {
+    .text {
+        font-size: 1.3rem;
+    }
+    .form input[type="submit"] {
+        font-size: 1.3rem;
+    }
+    .form input {
+        font-size: 1.3rem;
+    }
+    .form {
+        width: 18rem;
+    }
 }
