@@ -1,0 +1,5 @@
+#AuthName "Contenido restringido"
+#AuthType Basic
+#AuthUserFile /xampp/apache/users/.htpasswd
+
+#require valid-user

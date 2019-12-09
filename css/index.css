@@ -74,6 +74,14 @@
 }
 
 
+/* FIN MODALS */
+
+.error {
+    color: red;
+    font-size: .7rem;
+}
+
+
 /* RESPONSIVE TABLETS*/
 
 @media only screen and (max-width: 768px) {
