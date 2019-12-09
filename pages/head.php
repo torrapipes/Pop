@@ -7,6 +7,7 @@
         <link rel="icon" type="image/png" href="../img/octopus.png">
         <link rel="stylesheet" href="../css/general.css" >
         <link rel="stylesheet" href="../css/<?php echo $css?>.css" >
+
     </head>
 </html>
 
