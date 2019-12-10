@@ -16,7 +16,7 @@ include_once "head.php";
                     var correlaciones = new Map();
                     
                     for(item of list){
-                        correlaciones.set(item[0],(item[1].matriu));
+                        correlaciones.set(item[0],phi(item[1].matriu));
                     };
                     
                     function listarCorrelaciones() {
@@ -28,7 +28,7 @@ include_once "head.php";
                           dd.className = "graphicPhi";
                           var span = document.createElement("span");
                           span.className = "nombreEvento";
-                          var nombreE = document.createTextNode(e[0].split("_").join(" "));
+                          var nombreE = document.createTextNode(e[0].split("_").join(" ") );
                           span.appendChild(nombreE);
                           dd.appendChild(span);
                           dl.appendChild(dd);
