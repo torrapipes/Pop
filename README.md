@@ -3,7 +3,7 @@ De vez en cuando, usualmente entre las 8 y las 10 de la noche, Mariano se transf
 
 
 # Interficies Web Documentación
-# Índice
+## Índice
 
 **Disposición para diferentes interfaces**
 
@@ -16,7 +16,7 @@ De vez en cuando, usualmente entre las 8 y las 10 de la noche, Mariano se transf
 **Screens**
 #
 
-# Disposición para diferentes interfaces
+## Disposición para diferentes interfaces
 
 Toda la web está diseñada con unidades de tamaño rem que permite poder definir ciertos aspectos del layout y adaptarse a las configuraciones del usuario. Por otra parte al no depender del elemento padre su comprensión de uso es más sencilla.  
 Se han requerido pocos cambios a nivel de media para ajustarse a los diferentes dispositivos y layouts, ya que la sencillez de la página sumada a la disposición en rem han desembocado en una web responsive casi por sí sola.
@@ -29,22 +29,26 @@ Se han requerido pocos cambios a nivel de media para ajustarse a los diferentes 
 
 
 
-# CSS FlexBox
+## CSS FlexBox
 
 Todos los elementos ( **resaltados en naranja en las imágenes** ) en el contenido del body (exceptuando header y footer) han sido tratados con FlexBox permitiendo así colocar las cajas principales y las cajas hija contenidas en éstas de manera que se comporten de forma predecible cuando el diseño se acomoda a diferentes dispositivos y layouts.
 
 El único elemento destacable que se ha decidido dejar fuera de la acomodación flexible ha sido el formulario &#39;Login&#39; de la página index.php por la necesidad de dejarlo en una posición adelantada respecto al background y el resto de elementos.
 
-![Lolo](https://github.com/torrapipes/Pop/blob/master/img/popIW01.jpg)
+index.php  
+![Lolo](https://github.com/torrapipes/Pop/blob/master/img/popIW01.jpg)  
+home.php  
 ![Lolo](https://github.com/torrapipes/Pop/blob/master/img/popIW02.jpg)  
-![Lolo](https://github.com/torrapipes/Pop/blob/master/img/popIW03.jpg)
-![Lolo](https://github.com/torrapipes/Pop/blob/master/img/popIW04.jpg)
+diario.php  
+![Lolo](https://github.com/torrapipes/Pop/blob/master/img/popIW03.jpg)  
+phi.php  
+![Lolo](https://github.com/torrapipes/Pop/blob/master/img/popIW04.jpg)  
 
-# Fuente
+## Fuente
 
 Se ha utilizado un único estilo de letra, &#39;Bookman Old Style&#39;, para darle continuidad entre las diferentes estructuras, creando un estilo armonioso y de fácil visualización.
 
-# Color
+## Color
 
 Con la disposición de color se ha intentado un estilo agradable a la vista y que se comprendiera la conexión entre los diferentes elementos. Destacando los elementos importantes y, a la vez, resaltándolos todos. No se han elegido colores complementarios (armoniosamente opuestos) para centrar la atención en la información contenida en la web y, además, no cansar al usuario con choques de colors.
 
@@ -57,10 +61,10 @@ Con la disposición de color se ha intentado un estilo agradable a la vista y qu
 
 
 
-# Screens
+## Screens
 
 **https://drive.google.com/drive/folders/1Yn5e0rhP2oXnxp5eF7eq2uXMFhA7sj8M?usp=sharing**
 
-# Link del documento en drive
+## Link del documento en drive
 
 **https://docs.google.com/document/d/1asZ31HQj4V38nBzvBChRof2qPJcMyY_TbACVqKVSwK0/edit?usp=sharing**
