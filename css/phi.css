@@ -31,14 +31,7 @@ dl {
     font-size: .8rem;
     line-height: 1;
     text-transform: uppercase;
-    width: 65rem;
     height: 2rem;
     margin-left: 10rem;
-    background: repeating-linear-gradient(
-            to right,
-            #ddd,
-            #ddd 1px,
-            #fff 1px,
-            #fff 5%
-    );
+    background: repeating-linear-gradient( to right, #ddd, #ddd 1px, #fff 1px, #fff 5%);
 }

@@ -1,5 +1,7 @@
 <header>
     <div id="header">
-        <img src="../img/logo.png" alt="Logo" />
+        <a href="home.php">
+            <img src="../img/logo.png" alt="Logo" />
+        </a>
     </div>
 </header>
