@@ -36,3 +36,11 @@ dl {
     background: repeating-linear-gradient( to right, #ddd, #ddd 1px, #fff 1px, #fff 5%);
 }
 
+@media(max-width: 450px) {
+    .graphicPhi {
+        margin-left: 6rem;
+    }
+    .nombreEvento {
+        justify-content: flex-start;
+    }
+}
