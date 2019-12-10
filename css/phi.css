@@ -34,11 +34,5 @@ dl {
     margin-bottom: 0.3rem;
     height: 2rem;
     margin-left: 10rem;
-    background: repeating-linear-gradient(
-            to right,
-            #ddd,
-            #ddd 1px,
-            #fff 1px,
-            #fff 5%
-    );
+    background: repeating-linear-gradient( to right, #ddd, #ddd 1px, #fff 1px, #fff 5%);
 }
