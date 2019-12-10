@@ -1,11 +1,9 @@
-
-
-
 var diarioMariano2 = [
     { "eventos": ["mejillones", "caminar", "siesta con La Vuelta"], "pulpo": false },
     { "eventos": ["pan de millo"], "pulpo": false },
     { "eventos": ["mejillones", "chinchos", "me lave los dientes", "Panorama", "siesta con La Vuelta"], "pulpo": true }
 ];
+for ()
 
 
 /**
