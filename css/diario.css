@@ -51,3 +51,9 @@
 .diaContent {
     display: flex;
 }
+
+@media (max-width: 1000px){
+    .diario {
+        flex-direction: column;
+    }
+}
