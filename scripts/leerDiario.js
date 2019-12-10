@@ -1,13 +1,3 @@
-
-
-
-var diarioMariano2 = [
-    { "eventos": ["mejillones", "caminar", "siesta con La Vuelta"], "pulpo": false },
-    { "eventos": ["pan de millo"], "pulpo": false },
-    { "eventos": ["mejillones", "chinchos", "me lave los dientes", "Panorama", "siesta con La Vuelta"], "pulpo": true }
-];
-
-
 /**
  * Función que recorre el diario y crea matrices dinámicamente
  */
@@ -214,10 +204,6 @@ function checkPostcondiciones(estructuraDeDatos) {
 
 
 }
-
-// var estructura = leerDiario();
-// checkPostcondiciones(estructura);
-
 
 QUnit.module("Casos test precondicions", function() {
     QUnit.test('Test checkPrecondiciones()"', function(assert) {

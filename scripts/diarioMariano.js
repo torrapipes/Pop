@@ -6,7 +6,7 @@ var DIARIO = [
     {"eventos":["feria del pulpo","pementos de padron","me lave los dientes","caminar","siesta con La Vuelta","Paris de Noia"],"pulpo":false},
     {"eventos":["caldo gallego","filloas","me lave los dientes","caña de 1906","siesta con La Vuelta"],"pulpo":false},
     {"eventos":["pizza","me lave los dientes","mencia","leer el Marca","baño en a Lanzada"],"pulpo":false},
-    {"eventos":["pan de millo","recortarme la barba","me lave los dientes","Panorama","leer el Marca"],"pulpo":false},
+    {"eventos":["pan de millo","recortarme la barba","me lave los dientes","Panorama","leer el   Marca"],"pulpo":false},
     {"eventos":["empanada de bacalao","me lave los dientes","leer el Marca"],"pulpo":false},
     {"eventos":["pizza","me lave los dientes","Panorama","leer el Marca"],"pulpo":false},
     {"eventos":["carne o caldeiro","chinchos","me lave los dientes","leer el Marca"],"pulpo":false},
@@ -290,71 +290,5 @@ function checkPostcondiciones(estructuraDeDatos) {
         console.log("Error en checkPostcondiciones: " + error);
         throw error;
     }
-
-
 }
 
-// var estructura = leerDiario();
-// checkPostcondiciones(estructura);
-
-
-QUnit.module("Casos test precondicions", function() {
-    QUnit.test('Test checkPrecondiciones()"', function(assert) {
-
-        let diari = [
-            { "eventos": ["hola", "hey", "ho"], "pulpo": false }
-        ];
-        let diari2 = [
-            { "ajkhflsa": ["hola", "hey", "ho"], "pulpo": false }
-        ];
-        let diari3 = [
-            { "eventos": ["hola", 5, "ho"], "pulpo": true }
-        ];
-        let diari4 = [
-            { "eventos": ["hola", "hol", "ho"], "pulpo": 2 }
-        ];
-        let diari5 = [
-            { "eventos": ["hola"], "pulpo": true }
-        ];
-
-        assert.equal(checkPrecondiciones(diari), true);
-
-        // Debe dar false, ya que la 1a propiedad debe llamarse "eventos"
-        assert.equal(checkPrecondiciones(diari2), false);
-
-        // Debe dar false, ya que la 1a propiedad debe contener solo strings
-        assert.equal(checkPrecondiciones(diari3), false);
-
-        // Debe dar false, ya que la 2a propiedad debe contener solo booleanos
-        assert.equal(checkPrecondiciones(diari4), false);
-
-        // Debe dar true ya que puede haber solo 1 evento
-        assert.equal(checkPrecondiciones(diari5), true);
-
-    });
-});
-
-QUnit.module("Casos test postcondicions", function() {
-    QUnit.test('Test checkPostcondiciones()"', function(assert) {
-
-        var lista = new Map();
-        var array = [
-            [777, 222],
-            [222, 777]
-        ];
-        var objeto = {
-            matriu: array
-        };
-        lista.set("mejillones", objeto);
-
-
-        var lista2 = new Map();
-        lista2.set("mejillones", "patata");
-
-
-        assert.equal(checkPostcondiciones(lista), true);
-        assert.equal(checkPostcondiciones(lista2), false);
-
-
-    });
-});

@@ -53,8 +53,5 @@ QUnit.module("Casos test correlació", function() {
 
         assert.equal(phi(matriu2).toFixed(9), 0.316227766);
 
-        assert.equal(phi(matriu3).toFixed(9), 0.277223054);
-
-
     });
 });
