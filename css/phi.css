@@ -1,0 +1,44 @@
+h2 {
+    text-align: center;
+}
+
+dl {
+    display: flex;
+    background-color: #C797DF;
+    flex-direction: column;
+    width: 72rem;
+    max-width: 75rem;
+    position: relative;
+    padding: 4rem;
+    border-radius: 2rem;
+    box-shadow: #704070 13px 13px 30px 0px;
+    margin: 2rem;
+}
+
+.nombreEvento {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    width: 12rem;
+    background-color: #C797DF;
+    position: absolute;
+    left: 0;
+    justify-content: flex-end;
+}
+
+.graphicPhi {
+    font-size: .8rem;
+    line-height: 1;
+    text-transform: uppercase;
+    width: 65rem;
+    height: 2rem;
+    margin-left: 10rem;
+    background: repeating-linear-gradient(
+            to right,
+            #ddd,
+            #ddd 1px,
+            #fff 1px,
+            #fff 5%
+    );
+}
