@@ -25,7 +25,8 @@ include_once "head.php";
                         var dl =document.createElement("dl");
                         for(e of correlaciones){
                           var dd = document.createElement("dd");
-                          dd.className = "graphicPhi"
+                          dd.className = "graphicPhi";
+                          dd.title = e[1];
                           var span = document.createElement("span");
                           span.className = "nombreEvento";
                           var nombreE = document.createTextNode(e[0].split("_").join(" ") );
