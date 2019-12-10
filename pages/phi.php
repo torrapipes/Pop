@@ -25,7 +25,7 @@ include_once "head.php";
                         var dl =document.createElement("dl");
                         for(e of correlaciones){
                           var dd = document.createElement("dd");
-                          dd.className = "graphicPhi";
+                          dd.className = "graphicPhi"
                           var span = document.createElement("span");
                           span.className = "nombreEvento";
                           var nombreE = document.createTextNode(e[0].split("_").join(" ") );
@@ -36,7 +36,18 @@ include_once "head.php";
                           }
                         document.body.appendChild(div);
                     }
-                    listarCorrelaciones();   
+                    listarCorrelaciones();  
+                    var id = 0;
+                    for(e of correlaciones){
+                        var width = (e[1] - (-1)) * ((50-0)/1+1).toString() + "%";
+                        document.getElementsByClassName("graphicPhi")[id].style.width = width;
+                        if((e[1] - (-1)) * ((50-0)/1+1) > 57.9){
+                            document.getElementsByClassName("graphicPhi")[id].style.background = "#4D186C";
+                        }else{
+                            document.getElementsByClassName("graphicPhi")[id].style.background = "#704070";
+                        }
+                        id++;
+                    }
                 }
                 
             </script>';
