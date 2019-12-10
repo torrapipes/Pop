@@ -60,3 +60,7 @@ El único elemento destacable que se ha decidido dejar fuera de la acomodación 
 # Screens
 
 **https://drive.google.com/drive/folders/1Yn5e0rhP2oXnxp5eF7eq2uXMFhA7sj8M?usp=sharing**
+
+# Link del documento en drive
+
+**https://docs.google.com/document/d/1asZ31HQj4V38nBzvBChRof2qPJcMyY_TbACVqKVSwK0/edit?usp=sharing**
