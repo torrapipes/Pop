@@ -1,0 +1,53 @@
+.diario {
+    display: flex;
+}
+
+.mes {
+    margin: 2rem;
+    background-color: #C797DF;
+    border-radius: 2rem;
+    width: 30rem;
+    box-shadow: #704070 13px 13px 30px 0px;
+}
+
+.mesTitle{
+    background: #4D186C;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    text-align: center;
+}
+
+.diaTitle {
+    text-align: center;
+    background: #86568C;
+    margin: 0;
+    padding: 0.2rem;
+}
+
+.evento {
+    text-transform: capitalize;
+    margin-left: 1rem;
+}
+
+.eventos {
+    width: 50%;
+    height: 14rem;
+}
+
+.trans {
+    text-align: right;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trans img {
+    height: 10rem;
+}
+
+.diaContent {
+    display: flex;
+}

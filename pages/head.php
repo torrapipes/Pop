@@ -7,6 +7,9 @@
         <link rel="icon" type="image/png" href="../img/octopus.png">
         <link rel="stylesheet" href="../css/general.css" >
         <link rel="stylesheet" href="../css/<?php echo $css?>.css" >
+        <script type="text/javascript" src="../scripts/leerDiario.js" ></script>
+        <script type="text/javascript" src="../scripts/phi.js" ></script>
+        <script type="text/javascript" src="../scripts/diarioMariano.js" ></script>
     </head>
 </html>
 
