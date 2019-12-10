@@ -14,7 +14,7 @@ include_once "head.php";
             <img src="../img/diario.png" alt="diario">
             <div>
                 <h2 class="card-title">Diario</h2>
-                <p>______________________________________________</p>
+                <p class="line">______________________________________________</p>
                 <p class="card-text">Toda la actividad que ha tenido lugar en un periodo concreto</p>
                 <a href="diario.php" class="card-btn">Visitar</a>
             </div>
@@ -23,7 +23,7 @@ include_once "head.php";
             <img src="../img/correlaciones.png" alt="correlaciones">
             <div>
                 <h2 class="card-title">Correlaciones</h2>
-                <p>______________________________________________</p>
+                <p class="line">______________________________________________</p>
                 <p class="card-text">Relación de cada evento con las transformaciones en pulpo</p>
                 <a href="phi.php" class="card-btn">Calcular</a>
             </div>
