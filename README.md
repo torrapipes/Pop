@@ -35,10 +35,10 @@ Todos los elementos ( **resaltados en naranja en las imágenes** ) en el conteni
 
 El único elemento destacable que se ha decidido dejar fuera de la acomodación flexible ha sido el formulario &#39;Login&#39; de la página index.php por la necesidad de dejarlo en una posición adelantada respecto al background y el resto de elementos.
 
-![Lolo](/img/popIW01.jpg)
-![Lolo](/img/popIW01.jpg)
-![Lolo](/img/popIW01.jpg)
-![Lolo](/img/popIW01.jpg)
+![Lolo](https://github.com/torrapipes/Pop/blob/master/img/popIW01.jpg)
+![Lolo](https://github.com/torrapipes/Pop/blob/master/img/popIW02.jpg)
+![Lolo](https://github.com/torrapipes/Pop/blob/master/img/popIW03.jpg)
+![Lolo](https://github.com/torrapipes/Pop/blob/master/img/popIW04.jpg)
 
 # Fuente
 
