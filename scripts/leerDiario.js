@@ -23,7 +23,6 @@ function leerDiario(diario) {
 
                     var objeto_evento = {
                         matriu: new Array(new Array(), new Array())
-                            /*phi: phi()*/
                     };
 
                     // Incluimos el evento con su objeto en el map
