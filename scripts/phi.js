@@ -24,7 +24,6 @@ function phi(matriu) {
         return phi;
 
     } catch (error) {
-        // Afegir div on botarà s'error
         console.log("Ha ocurrido un error en el sistema, por favor contacte con el administrador");
         throw "Error en función phi, " + error;
     }
