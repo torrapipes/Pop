@@ -80,11 +80,6 @@ function leerDiario(diario) {
 
 }
 
-function mapToJson(map) {
-    var mapJson = JSON.stringify(map);
-    return mapJson;
-}
-
 
 /**
  * Precondiciones para la estructura de datos
