@@ -4,6 +4,9 @@ De vez en cuando, usualmente entre las 8 y las 10 de la noche, Mariano se transf
 # Tiempo invertido
 ![Lolo](https://github.com/torrapipes/Pop/blob/master/img/Clockify.png)
 
+# Diagrama de componentes
+![Lolo](https://github.com/torrapipes/Pop/blob/master/img/dComponentes.png)
+
 
 # Interficies Web Documentación
 ## Índice
