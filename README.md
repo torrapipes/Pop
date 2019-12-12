@@ -52,7 +52,6 @@ Se han requerido pocos cambios a nivel de media para ajustarse a los diferentes 
 | Móvil  | max-width 450px |
 
 
-
 ## CSS FlexBox
 
 Todos los elementos ( **resaltados en naranja en las imágenes** ) en el contenido del body (exceptuando header y footer) han sido tratados con FlexBox permitiendo así colocar las cajas principales y las cajas hija contenidas en éstas de manera que se comporten de forma predecible cuando el diseño se acomoda a diferentes dispositivos y layouts.
@@ -92,3 +91,10 @@ Con la disposición de color se ha intentado un estilo agradable a la vista y qu
 ## Link del documento en drive
 
 **https://docs.google.com/document/d/1asZ31HQj4V38nBzvBChRof2qPJcMyY_TbACVqKVSwK0/edit?usp=sharing**
+
+# Mejoras y dificultades
+
+- Pudimos generar la conexión a la base de datos pero no acceder a ella (AJAX).
+- No tuvimos claro los requisitos de cada parte, ya que a pesar de estar especificados los objetivos, el planteamiento de la totalidad del proyecto no estaba concretado. Esto generó un problema en cuanto a la organización del tiempo.
+- La división del tiempo no fue apropiada, por nuestra parte, frente a las dificultades que se nos presentaron.
+- La estructura de los componentes podría ser más correcta, tanto en divisiones como en nomenclatura.
