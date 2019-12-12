@@ -32,6 +32,8 @@
     padding: 0.5rem;
 }
 
+
+/* CSS TABLETS */
 @media only screen and (max-width: 800px) {
     .flex-container {
         flex-direction: column;

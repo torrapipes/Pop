@@ -59,7 +59,6 @@
 
 
 /* MODALS */
-
 .hide {
     left: -1000rem !important;
     transition-property: left;
@@ -72,8 +71,6 @@
     transition-property: left;
     transition: 2s;
 }
-
-
 /* FIN MODALS */
 
 .error {
@@ -83,7 +80,6 @@
 
 
 /* RESPONSIVE TABLETS*/
-
 @media only screen and (max-width: 800px) {
     .text {
         font-size: 1rem;
@@ -98,7 +94,6 @@
 
 
 /* RESPONSIVE MOVIL*/
-
 @media only screen and (max-width: 450px) {
     .text {
         font-size: 1.3rem;

@@ -24,6 +24,7 @@ include_once "head.php";
             <div>
                 <input type="submit" name="enter" value="Entrar">
             </div>
+
             <a href="#" id="login-text" class="text">¿Aún no te has registrado? Regístrate aquí </a>
         </form>
     </div>

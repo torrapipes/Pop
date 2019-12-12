@@ -31,26 +31,3 @@ function phi(matriu) {
 
 }
 
-
-QUnit.module("Casos test correlació", function() {
-    QUnit.test('Testing phi()', function(assert) {
-        let matriu = [
-            [76, 9],
-            [4, 1]
-        ];
-        let matriu2 = [
-            [2, 3],
-            [0, 1]
-        ];
-        let matriu3 = [
-            [777, 222],
-            [222, 777]
-        ];
-
-        // toFixed(x) manté un nombre x especific de decimals
-        assert.equal(phi(matriu).toFixed(3), 0.069);
-
-        assert.equal(phi(matriu2).toFixed(9), 0.316227766);
-
-    });
-});

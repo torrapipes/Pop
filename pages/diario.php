@@ -8,8 +8,7 @@ include_once "head.php";
 <body>
     <?php
     include_once "header.php";
-    ?>
-        <?php
+
         $diarioJson = file_get_contents('../resources/diarioMariano.json');
         $diario = json_decode($diarioJson, true);
 

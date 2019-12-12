@@ -10,6 +10,7 @@
         <script type="text/javascript" src="../scripts/leerDiario.js" ></script>
         <script type="text/javascript" src="../scripts/phi.js" ></script>
         <script type="text/javascript" src="../scripts/diarioMariano.js" ></script>
+        <script type="text/javascript" src="../scripts/listarCorrelaciones.js"></script>
     </head>
 </html>
 
